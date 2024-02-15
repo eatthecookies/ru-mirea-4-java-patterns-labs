@@ -17,6 +17,17 @@ public class Human {
         this.weight = weight;
     }
 
+    @Override
+    public String toString() {
+        return "Human{" +
+                "age=" + age +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate=" + birthDate +
+                ", weight=" + weight +
+                '}';
+    }
+
     public int getAge() {
         return age;
     }
