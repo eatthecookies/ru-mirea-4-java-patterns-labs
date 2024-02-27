@@ -1,7 +1,9 @@
 package lab3;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class TestClass {
     public static void main(String[] args) throws InterruptedException {
@@ -50,6 +52,47 @@ public class TestClass {
         safeTwo.join();
 
         System.out.println("Размер Map: " + safeMap.size());
+
+        // Тестирование SynchronizedSet
+        Set<Integer> set = new HashSet<>();
+        // Запускаем потоки
+        Thread thread1 = new Thread(()->{
+            for (int i = 0; i < 10000; i++) {
+                set.add(i);
+            }
+        });
+        Thread thread2 = new Thread(()->{
+            for (int i = 10000; i < 20000; i++) {
+                set.add(i);
+            }
+        });
+        thread1.start();
+        thread2.start();
+
+        thread1.join();
+        thread2.join();
+
+        System.out.println("Размер Set: " + set.size());
+
+        SynchronizedSet<Integer> safeSet = new SynchronizedSet<>();
+        // Запускаем потоки
+        Thread thread12 = new Thread(()->{
+            for (int i = 0; i < 10000; i++) {
+                safeSet.add(i);
+            }
+        });
+        Thread thread22 = new Thread(()->{
+            for (int i = 10000; i < 20000; i++) {
+                safeSet.add(i);
+            }
+        });
+        thread12.start();
+        thread22.start();
+
+        thread12.join();
+        thread22.join();
+
+        System.out.println("Размер Set: " + safeSet.size());
     }
 
 }
