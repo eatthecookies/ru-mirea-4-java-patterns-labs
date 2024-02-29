@@ -17,6 +17,8 @@ public class TestClass {
         });
 
         executor.submit(() -> System.out.println("Start"));
+
+        executor.shutdown();
     }
 }
 
