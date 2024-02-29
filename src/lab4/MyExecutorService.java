@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.*;
 
 public class MyExecutorService implements ExecutorService {
-    ExecutorService es;
+    private final ExecutorService es;
     public MyExecutorService(int n) {
         es = Executors.newFixedThreadPool(n);
     }
@@ -72,7 +72,7 @@ public class MyExecutorService implements ExecutorService {
 
     @Override
     public void close() {
-        ExecutorService.super.close();
+        es.close();
     }
 
     @Override
