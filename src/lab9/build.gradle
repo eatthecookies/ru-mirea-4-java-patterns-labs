@@ -1,0 +1,36 @@
+plugins{
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'org.example.Main'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.example.Main'
+    }
+}
+
+task doDocker{
+    description = 'Моя задача'
+    dependsOn 'build'
+    doFirst {
+        copy {
+            from "${buildDir}/libs/lab9.jar"
+            into "${projectDir}/docker"
+        }
+    }
+
+    doLast {
+        exec {
+            commandLine 'docker', 'build', '-t', 'dockerimagename', 'docker'
+        }
+    }
+
+    doLast {
+        exec {
+            commandLine 'docker', 'run', '-d', '--name', 'dockerimagename', 'dockerimagename'
+        }
+    }
+
+}
