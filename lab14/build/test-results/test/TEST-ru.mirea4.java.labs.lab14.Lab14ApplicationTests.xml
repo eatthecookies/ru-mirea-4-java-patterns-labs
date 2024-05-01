@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.mirea4.java.labs.lab14.Lab14ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-30T17:15:26" hostname="EATTHECOOKIES" time="1.106">
+  <properties/>
+  <testcase name="contextLoads()" classname="ru.mirea4.java.labs.lab14.Lab14ApplicationTests" time="1.106"/>
+  <system-out><![CDATA[20:15:22.565 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ru.mirea4.java.labs.lab14.Lab14ApplicationTests]: Lab14ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:15:22.731 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ru.mirea4.java.labs.lab14.Lab14Application for test class ru.mirea4.java.labs.lab14.Lab14ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2024-04-30T20:15:23.366+03:00  INFO 19700 --- [lab14] [    Test worker] r.m.j.labs.lab14.Lab14ApplicationTests   : Starting Lab14ApplicationTests using Java 20.0.2 with PID 19700 (started by sasha in D:\java\lab14)
+2024-04-30T20:15:23.368+03:00  INFO 19700 --- [lab14] [    Test worker] r.m.j.labs.lab14.Lab14ApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2024-04-30T20:15:26.059+03:00  INFO 19700 --- [lab14] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-04-30T20:15:26.164+03:00  INFO 19700 --- [lab14] [    Test worker] r.m.j.labs.lab14.Lab14ApplicationTests   : Started Lab14ApplicationTests in 3.239 seconds (process running for 5.068)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
